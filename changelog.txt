@@ -1,0 +1,48 @@
+ * Changelog for Custom Error Pages Module for Sentora.org
+ * Changelog.txt
+ * Author :  TGates
+ * Email :  tgates@mach-hosting.com
+
+ v3.0.2
+-Updated Copyright notice
+
+v3.0.1
+-Updated Sentora site links and repository links.
+
+v2.0.2
+-Updated module description.
+
+v2.0.1
+-Added donation link.
+
+v2.0.0
+-Complete layout update.
+
+v1.0.5
+-Added ability to edit SubDomains also
+
+v1.0.4
+-Changed the way error pages are selected (Now load on select)
+-Added confirmation popup when asked to restore default pages
+-Cleaned up coding
+-Added the use of 'Init' to load css/js/etc
+-Added notification of what error page is loaded on page selection menu
+-Various layout enhancements
+
+v1.0.3
+-Added the ability to restore default pages on demand
+-Added preview of current pages
+-Changed the way error pages are listed - scans _errorpages folder instead of static list
+ (For future use of more than the default 4 error pages)
+-Changed the way default error pages are checked (See above)
+
+v1.0.2
+-Reconfigured ckeditor
+-Reconfigured layout of page select
+
+v1.0.1
+-Changed the way domains are selected
+-Added restore default pages if none exist
+
+v1.0.0
+-Initial Module creation
