@@ -4,7 +4,7 @@
 	<latestversion>312</latestversion>
 	<downloadurl>http://zppy-repo.mach-hosting.com/error_pages.zpp</downloadurl>
 	<desc>This module allows the user to edit and restore the Custom Error pages for each of their domains. NOTE: Error pages are added automatically if they are found in the _errorpages directory and if they are a valid error code, and saved in the proper format: [error_number].html</desc>
-	<updatedesc>Updated module for Sentora Panel.</updatedesc>
+	<updatedesc>Fixed major issue of not properly passing domain name and domain path to the editor. Also minor appearance/css updates.</updatedesc>
 	<authorname>T.Gates</authorname>
 	<authoremail>tgates@mach-hosting.com</authoremail>
 	<authorurl>http://forums.sentora.org/showthread.php?tid=498</authorurl>
