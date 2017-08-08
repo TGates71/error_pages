@@ -1,7 +1,7 @@
 <?php
 /*
  * Upgrade script for Custom Error Pages Module for Sentora.org
- * Version : 3.0.2
+ * Version : 3.1.2
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
  */
@@ -17,7 +17,7 @@ require_once('dryden/ctrl/users.class.php');
 require_once('dryden/fs/director.class.php');
 require_once('inc/dbc.inc.php');
 
-UpgradeModule('302', 'error_pages');
+UpgradeModule('312', 'error_pages');
 
 function UpgradeModule($newversion, $module){
     global $zdbh;

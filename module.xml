@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module>
     <name>Error Pages</name>
-    <version>302</version>
+    <version>312</version>
     <defaultcat>Advanced</defaultcat>
     <desc>This module allows the user to edit and restore the Custom Error pages for each of their domains. NOTE: Error pages are added automatically if they are found in the _errorpages directory and if they are a valid error code, and saved in the proper format: [error_number].html</desc>
 	<type>user</type>
     <authorname>TGates</authorname>
     <authoremail>tgates@mach-hosting.com</authoremail>
-    <authorurl>http://www.sentora.org/</authorurl>
+    <authorurl>http://forums.sentora.org/showthread.php?tid=498</authorurl>
     <updateurl>http://zppy-repo.mach-hosting.com/error_pages.xml</updateurl>
 </module>

@@ -1,7 +1,7 @@
 <?php
 /*
  * Controller script for Custom Error Pages Module for Sentora.org
- * Version : 3.0.2
+ * Version : 3.1.2
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
  */
@@ -137,6 +137,7 @@ class module_controller {
     static function getDomVar() {
         if (isset($_POST['domain'])) {
 			$domVar = $_POST['domain'];
+			$domVar = str_replace('/', '', $domVar);
 			return $domVar;
         } else {
         	return false;
@@ -187,6 +188,7 @@ class module_controller {
         $chkdir = ctrl_options::GetSystemOption('hosted_dir') . $currentuser['username'] . "/public_html/";
         if (!$handle) {
             # Log an error as the folder cannot be opened...
+			echo "Cannot Open Folder...";
         } else {
             while ($file = @readdir($handle)) {
                 if ($file != "." && $file != ".." && $file != "_errorpages") {
@@ -267,7 +269,7 @@ class module_controller {
         return $message;
     }
     static function getCopyright() {
-        $message = '<font face="ariel" size="2">'.ui_module::GetModuleName().' v3.0.2 &copy; 2013-'.date("Y").' by <a target="_blank" href="http://forums.sentora.org/member.php?action=profile&uid=2">TGates</a> for <a target="_blank" href="http://sentora.org">Sentora Control Panel</a>&nbsp;&#8212;&nbsp;Help support future development of this module and donate today!</font>
+        $message = '<font face="ariel" size="2">'.ui_module::GetModuleName().' v3.1.2 &copy; 2013-'.date("Y").' by <a target="_blank" href="http://forums.sentora.org/member.php?action=profile&uid=2">TGates</a> for <a target="_blank" href="http://sentora.org">Sentora Control Panel</a>&nbsp;&#8212;&nbsp;Help support future development of this module and donate today!</font>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="DW8QTHWW4FMBY">

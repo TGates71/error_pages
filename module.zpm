@@ -1,7 +1,7 @@
 <!--
 /*
  * Main module script for Custom Error Pages Module for Sentora.org
- * Version : 3.0.2
+ * Version : 3.1.2
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
  */
@@ -31,18 +31,18 @@
     <div id="content" class="body-content">
         <% if DomainSelected %>
         <form name="home" action="?module=error_pages" method="post">
-            <input type="submit" value="<@ Restart @>">
+            <input class="btn btn-primary" type="submit" value="Select a different domain/Cancel">
             <@ CSFR_Tag @>
         </form>
         <!--START POPUP-->    
             <div id="blanket" style="display:none;"></div>
             <div id="popUpDiv" style="display:none;">
                 <div align="center">
-                    <button onClick="popup('popUpDiv')"><: Click to Close/Cancel :></button>
+                    <button class="btn btn-warning" onClick="popup('popUpDiv')"><: Click to Close/Cancel :></button>
                 </div>
                 <iframe src="./modules/error_pages/code/editor.php?domain=<@ DomVar @>" name="ep_editor" width="100%" height="1124" scrolling="auto" frameborder="0"></iframe>
             </div><br />
-            <button onClick="popup('popUpDiv')"><: Click to re-open the editor :></button>
+            <button class="btn btn-success" onClick="popup('popUpDiv')"><: Click to re-open the editor :></button>
         <!--END POPUP--> 
             <% else %>
             <h2><: Select domain or subdomain :></h2>
@@ -51,7 +51,7 @@
                             <select onChange="this.form.submit()" name="domain">
                                 <option value="">--- Select Domain ---</option>
                                 <% loop DomainList %>
-                                <option value="<& directory &>"><& name &></option>
+                                <option value="<& name &>|<& directory &>"><& name &></option>
                                 <% endloop %>
                             </select>
                          <@ CSFR_Tag @>
