@@ -3,11 +3,10 @@
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
 
-v3.1.2
--Fixed major issue of not properly passing domain name and domain path to the editor.
--Minor appearance/css updates.
+ v3.0.3
+-Removed pop-up editor and made it inline
 
-v3.0.2
+ v3.0.2
 -Updated Copyright notice
 
 v3.0.1

@@ -1,1 +1,0 @@
-To align the pop up editor window with 3rd party themes, open the theme's 'master.ztml' file and add <script type="text/javascript">var popLocation = "425"; var popBack = "450"</script> right after the last </script> tag and adjust the 2 numbers until it is where you would like it.

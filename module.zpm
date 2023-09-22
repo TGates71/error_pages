@@ -1,14 +1,11 @@
 <!--
 /*
  * Main module script for Custom Error Pages Module for Sentora.org
- * Version : 3.1.2
+ * Version : 3.0.3
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
  */
 -->
-<body onLoad="popup('popUpDiv')">
-
-<@ Init @>
 
 <div class="zmodule_content panel" id="zmodule_header_<@ ModuleName @>">
 
@@ -30,28 +27,23 @@
 <div class="zgrid_wrapper">
     <div id="content" class="body-content">
         <% if DomainSelected %>
-        <form name="home" action="?module=error_pages" method="post">
-            <input class="btn btn-primary" type="submit" value="Select a different domain/Cancel">
-            <@ CSFR_Tag @>
-        </form>
-        <!--START POPUP-->    
-            <div id="blanket" style="display:none;"></div>
-            <div id="popUpDiv" style="display:none;">
-                <div align="center">
-                    <button class="btn btn-warning" onClick="popup('popUpDiv')"><: Click to Close/Cancel :></button>
-                </div>
-                <iframe src="./modules/error_pages/code/editor.php?domain=<@ DomVar @>" name="ep_editor" width="100%" height="1124" scrolling="auto" frameborder="0"></iframe>
-            </div><br />
-            <button class="btn btn-success" onClick="popup('popUpDiv')"><: Click to re-open the editor :></button>
-        <!--END POPUP--> 
-            <% else %>
+			<div class="text-center">
+				<form name="home" action="?module=error_pages" method="post">
+					<input class="btn btn-primary" type="submit" value="<@ Restart @>">
+					<@ CSFR_Tag @>
+				</form>
+			</div>
+			<div class="zgrid_wrapper panel">
+				<@ OpenEditor @>
+			</div>
+		<% else %>
             <h2><: Select domain or subdomain :></h2>
                 <% if DomainList %>
                     <form name="domainSelect" action="#" method="post">
                             <select onChange="this.form.submit()" name="domain">
                                 <option value="">--- Select Domain ---</option>
                                 <% loop DomainList %>
-                                <option value="<& name &>|<& directory &>"><& name &></option>
+                                <option value="<& directory &>"><& name &></option>
                                 <% endloop %>
                             </select>
                          <@ CSFR_Tag @>
