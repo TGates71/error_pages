@@ -32,25 +32,28 @@
 					<input class="btn btn-primary" type="submit" value="<@ Restart @>">
 					<@ CSFR_Tag @>
 				</form>
+				<br />
 			</div>
 			<div class="zgrid_wrapper panel">
 				<@ OpenEditor @>
 			</div>
 		<% else %>
-            <h2><: Select domain or subdomain :></h2>
+			<div class="zgrid_wrapper panel">
+            <h4><: Select a domain or subdomain to continue :>:</h4>
                 <% if DomainList %>
                     <form name="domainSelect" action="#" method="post">
-                            <select onChange="this.form.submit()" name="domain">
-                                <option value="">--- Select Domain ---</option>
-                                <% loop DomainList %>
-                                <option value="<& directory &>"><& name &></option>
-                                <% endloop %>
-                            </select>
+						<ul style="list-style-type:none;" class="domainlist" id="domainlist1">
+							<% loop DomainList %>
+								<li><input type="radio" name="domain" value="<& directory &>" onclick="this.form.submit();"\>
+								&nbsp;<& name &></li>
+							<% endloop %>
+						</ul>
                          <@ CSFR_Tag @>
                     </form> 
                 <% else %>
                     <: You currently do not have any domains configured. :>
             <% endif %>
+		</div>
         <% endif %>
     </div>
 </div>

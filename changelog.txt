@@ -3,6 +3,16 @@
  * Author :  TGates
  * Email :  tgates@mach-hosting.com
 
+To-Do:
+-Add ability to edit the server's default static error pages if zadmin. (Also backup originals for restoring.)
+-Swap ckEditor for smaller tinyMCE - Testing needed
+
+ v3.0.4
+ -Converted all 'onclick="history.go();"' to normal links. (Fixes 'Document Expired' errors.)
+-Improved frontend layout and fixed the editor's iframe CSS to use the default Sentora theme CSS
+-Improved functionality
+-Cleaned up code
+
  v3.0.3
 -Removed pop-up editor and made it inline
 

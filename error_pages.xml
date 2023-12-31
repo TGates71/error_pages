@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <updateserver>
 	<modulename>Error Pages</modulename>
-	<latestversion>303</latestversion>
+	<latestversion>304</latestversion>
 	<downloadurl>https://zppy-repo.mach-hosting.com/repo/error_pages.zpp</downloadurl>
-	<desc>This module allows the user to edit and restore the Custom Error pages for each of their domains. NOTE: Error pages are added automatically if they are found in the _errorpages directory and if they are a valid error code, and saved in the proper format: [error_number].html</desc>
-	<updatedesc>Updated module for Sentora Panel.</updatedesc>
+	<desc>An error page informs a visitor when there is a problem accessing your site. Basic error pages are automatically provided by the web server (Apache). However, if you prefer, you can create a custom error page instead of using the defaults. NOTE: Error pages are added automatically if they are found in the _errorpages directory and if they are a valid error code, and saved in the proper format: [error_number].html (404.html)</desc>
+	<updatedesc>Redesigned front end, cleaned up code, fixed expired document error</updatedesc>
 	<authorname>T.Gates</authorname>
 	<authoremail>tgates@mach-hosting.com</authoremail>
 	<authorurl>http://www.sentora.org</authorurl>
